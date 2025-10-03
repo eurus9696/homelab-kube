@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - gotk-components.yaml
   - gotk-sync.yaml
-  #- ../../namespaces/homelab-namespace.yaml
+  - ../../namespaces/homelab-namespace.yaml
   #- ../../apps/base/ingress-nginx/helmrepository.yaml
   #- ../../apps/base/cert-manager/helmrepository.yaml
   #- ../../apps/base/postgres/helmrepository.yaml
