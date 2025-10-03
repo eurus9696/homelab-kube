@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: ingress-nginx
-      version: "2.3.0"
+      version: "2.3.x"
       interval: 1h
   releaseName: nginx-ingress    
   interval: 10m

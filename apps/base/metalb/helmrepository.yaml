@@ -1,8 +1,9 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v2
 kind: HelmRepository
 metadata:
   name: metalLB
   namespace: homelab
 spec:
   interval: 10m
-  url: https://metallb.github.io/metallb 
+  url: oci://registry-1.docker.io/bitnamicharts/
+  type: oci
