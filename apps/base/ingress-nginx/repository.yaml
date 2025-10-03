@@ -1,0 +1,10 @@
+
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: ingress-nginx
+  namespace: homelab
+spec:
+  interval: 10m
+  url: oci://ghcr.io/nginx/charts/
+  type: oci
