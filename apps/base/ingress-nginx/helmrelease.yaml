@@ -6,11 +6,13 @@ metadata:
 spec:
   chart:
     spec:
-      chart: ingress-nginx
+      chart: nginx-ingress
       sourceRef:
         kind: HelmRepository
         name: ingress-nginx
       version: "5.7.0"
+      interval: 1h
+  releaseName: nginx-ingress    
   interval: 10m
   values:
     controller:
