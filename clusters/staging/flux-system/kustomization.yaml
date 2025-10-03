@@ -3,12 +3,12 @@ kind: Kustomization
 resources:
   - gotk-components.yaml
   - gotk-sync.yaml
-  - ../../namespaces/namespace.yaml
-  - ../../apps/base/ingress-nginx/helmrepository.yaml
-  - ../../apps/base/cert-manager/helmrepository.yaml
-  - ../../apps/base/postgres/helmrepository.yaml
+  #- ../../namespaces/homelab-namespace.yaml
+  #- ../../apps/base/ingress-nginx/helmrepository.yaml
+  #- ../../apps/base/cert-manager/helmrepository.yaml
+  #- ../../apps/base/postgres/helmrepository.yaml
   #- ../../apps/wallabag/helmrepository.yaml
   #- ../../apps/n8n/helmrepository.yaml
   #- ../../apps/wg-easy/helmrepository.yaml
-  - ../../apps/base/monitoring/helmrepository.yaml
-  - ../../apps/base/grafana/helmrepository.yaml
+  #- ../../apps/base/monitoring/helmrepository.yaml
+  #- ../../apps/base/grafana/helmrepository.yaml
