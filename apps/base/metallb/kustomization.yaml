@@ -4,3 +4,5 @@
 resources:
   - "helmrepository.yaml"
   - "helmrelease.yaml"
+  - "ipaddresspool.yaml"
+  - "test-loadbalancer.yaml"
