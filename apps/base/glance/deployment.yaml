@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: glance
-  namespace: glance
+  namespace: homelab
   labels:
     app: glance
 spec:
