@@ -10,7 +10,7 @@ metadata:
   namespace: homelab
 spec:
   hard:
-    requests.cpu: "3"
+    requests.cpu: "4"
     requests.memory: 24Gi
     limits.cpu: "4"
     limits.memory: 28Gi
@@ -25,9 +25,9 @@ metadata:
 spec:
   limits:
   - default:
-      cpu: 500m
-      memory: 3Gi
+      cpu: 200m
+      memory: 256Mi
     defaultRequest:
       cpu: 100m
-      memory: 3Gi
+      memory: 512Mi
     type: Container
