@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: glance-ingress
+  namespace: glance
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    # If you use cert-manager, uncomment and set your ClusterIssuer:
+    # cert-manager.io/cluster-issuer: "letsencrypt"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - glance.home.lab
+      secretName: glance-tls
+  rules:
+    - host: glance.home.lab
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: glance
+                port:
+                  number: 8080
