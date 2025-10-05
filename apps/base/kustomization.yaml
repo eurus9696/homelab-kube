@@ -3,3 +3,4 @@
 resources:
   - "./ingress-nginx"
   - "./metallb"
+  - "./glance"
