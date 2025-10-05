@@ -85,11 +85,9 @@ data:
                       - title: Gmail
                         url: https://mail.google.com/mail/u/0/
                       - title: Github
-                        url: https://github.com/
+                        url: https://github.com/eurus9696
                       - title: Wikipedia
                         url: https://en.wikipedia.org/
-                      - title: Github
-                        url: https://github.com
                   - title: Entertainment
                     color: 10 70 50
                     links:
