@@ -19,6 +19,13 @@ spec:
         - name: glance
           image: glanceapp/glance:latest
           imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "1Gi"
+            limits:
+              cpu: "100m"
+              memory: "256Mi"
           ports:
             - containerPort: 8080
               name: http
