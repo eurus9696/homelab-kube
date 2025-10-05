@@ -27,6 +27,7 @@ data:
                   - url: https://samwho.dev/rss.xml
                   - url: https://ishadeed.com/feed.xml
                     title: Ahmad Shadeed
+                - type: to-do
 
           - size: full
             widgets:
@@ -34,6 +35,13 @@ data:
                 widgets:
                   - type: hacker-news
                   - type: lobsters
+                    sort-by: hot
+                    tags:
+                      - go
+                      - security
+                      - linux
+                    limit: 15
+                    collapse-after: 5
 
               - type: videos
                 channels:
@@ -63,13 +71,6 @@ data:
                 # Optionally hide the location from being displayed in the widget
                 # hide-location: true
 
-              - type: markets
-                markets:
-                  - symbol: NIFTY
-                    name: NIFTY 50
-                  - symbol: TATAGOLD
-                    name: Gold ETF
-
               - type: releases
                 cache: 1d
                 # Without authentication the Github API allows for up to 60 requests per hour. You can create a
@@ -94,8 +95,6 @@ data:
                     links:
                       - title: fmhy
                         url: https://www.fmhy.net
-                      - title: Disney+
-                        url: https://www.disneyplus.com/
                       - title: YouTube
                         url: https://www.youtube.com/
                   - title: Social
