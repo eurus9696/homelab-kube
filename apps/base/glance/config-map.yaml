@@ -27,7 +27,7 @@ data:
                   - url: https://samwho.dev/rss.xml
                   - url: https://ishadeed.com/feed.xml
                     title: Ahmad Shadeed
-                - type: to-do
+              - type: to-do
 
           - size: full
             widgets:
