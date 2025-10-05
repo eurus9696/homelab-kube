@@ -11,15 +11,15 @@ spec:
         kind: HelmRepository
         name: metallb
       #version: "6.4.x"
-      interval: 1h
+      interval: 24h
   releaseName: metrallb
-  interval: 10m
+  interval: 24h
   values:
     controller:
       resources:
         requests:
-          cpu: 200m
+          cpu: 100m
           memory: 512Mi
         limits:
-          cpu: 500m
+          cpu: 150m
           memory: 512Mi
