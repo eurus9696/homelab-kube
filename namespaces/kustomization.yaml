@@ -1,3 +1,4 @@
 
 resources:
   - "homelab-namespace.yaml"
+  - "cert-manager-namespace.yaml"
