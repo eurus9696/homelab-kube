@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: homelab-ca
+  namespace: homelab
+spec:
+  isCA: true
+  commonName: homelab-ca
+  secretName: homelab-ca-secret
+  issuerRef:
+    name: bootstrap-selfsigned
+    kind: Issuer
+  duration: 87600h # 10 years
+  renewBefore: 720h # 30 days

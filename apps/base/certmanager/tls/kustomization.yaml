@@ -1,0 +1,6 @@
+
+resources:
+  - "ca-issuer.yaml"
+  - "certificate-glance.yaml"
+  - "ca-root-certificate.yaml"
+  - "selfsigned-bootstrap-issuer.yaml"

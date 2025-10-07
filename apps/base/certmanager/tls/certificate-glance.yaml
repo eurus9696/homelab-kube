@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: glance-tls
+  namespace: homelab
+spec:
+  secretName: glance-tls
+  duration: 2160h # 90 days
+  renewBefore: 360h
+  commonName: glance.home.lab
+  dnsNames:
+    - glance.home.lab
+  issuerRef:
+    name: ca-issuer
+    kind: Issuer

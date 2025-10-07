@@ -2,4 +2,5 @@
 resources:
   - "helmrepository.yaml"
   - "helmrelease.yaml"
-  - "cluster-issuer-staging.yaml"
+  #- "cluster-issuer-staging.yaml"
+  - tls
