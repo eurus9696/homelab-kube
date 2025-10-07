@@ -1,0 +1,5 @@
+
+resources:
+  #- "./cert-manager"
+  - "./ingress-nginx"
+  - "./metallb"
