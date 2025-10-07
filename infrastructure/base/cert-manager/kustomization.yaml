@@ -1,6 +1,0 @@
-
-
-
-resources:
-  - "hemlrelease.yaml"
-  - "helmrepository.yaml"
