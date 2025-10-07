@@ -4,4 +4,4 @@
 resources:
   - "helmrepository.yaml"
   - "helmrelease.yaml"
-  - "ipaddresspool.yaml"
+  #- "ipaddresspool.yaml"
