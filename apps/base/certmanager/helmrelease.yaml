@@ -5,8 +5,6 @@ metadata:
   namespace: cert-manager
 spec:
   interval: 10m
-  install:
-    createNamespace: true
   chart:
     spec:
       chart: cert-manager
