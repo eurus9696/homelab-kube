@@ -1,0 +1,8 @@
+
+resources:
+  - "helmrepository.yaml"
+  - "helmrelease.yaml"
+  - "prometheusrules.yaml"
+  - "loki-promtail-helmrelease.yaml"
+  - "grafana-helmrelease.yaml"
+  - "grafana-ingress.yaml"

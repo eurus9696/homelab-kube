@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: grafana-tls
+  namespace: homelab
+spec:
+  secretName: grafana-tls
+  duration: 2160h # 90 days
+  renewBefore: 360h
+  commonName: grafana.home.lab
+  dnsNames:
+    - grafana.home.lab
+  issuerRef:
+    name: ca-issuer
+    kind: Issuer

@@ -2,5 +2,6 @@
 resources:
   - "ca-issuer.yaml"
   - "certificate-glance.yaml"
+  - "certificate-grafana.yaml"
   - "ca-root-certificate.yaml"
   - "selfsigned-bootstrap-issuer.yaml"

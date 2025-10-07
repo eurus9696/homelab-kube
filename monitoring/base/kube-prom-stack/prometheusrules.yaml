@@ -1,0 +1,32 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: homelab-rules
+  namespace: monitoring
+spec:
+  groups:
+    - name: node.rules
+      rules:
+        - alert: NodeHighCPU
+          expr: 100 * (1 - avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m]))) > 80
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Node high CPU ({{ $labels.instance }})"
+        - alert: NodeHighMemory
+          expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100 > 85
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Node high memory usage ({{ $labels.instance }})"
+    - name: kube.rules
+      rules:
+        - alert: PodRestartHigh
+          expr: increase(kube_pod_container_status_restarts_total[15m]) > 3
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Pod restarting frequently ({{ $labels.pod }})"
