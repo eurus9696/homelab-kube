@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: prometheus-community
-  namespace: monitoring
+  namespace: homelab
 spec:
   url: https://prometheus-community.github.io/helm-charts
   interval: 24h
@@ -11,7 +11,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: grafana
-  namespace: monitoring
+  namespace: homelab
 spec:
   url: https://grafana.github.io/helm-charts
   interval: 24h
@@ -20,7 +20,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: bitnami
-  namespace: monitoring
+  namespace: homelab
 spec:
   url: https://charts.bitnami.com/bitnami
   interval: 24h
@@ -30,7 +30,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: grafana-loki
-  namespace: monitoring
+  namespace: homelab
 spec:
   url: https://grafana.github.io/helm-charts
   interval: 24h

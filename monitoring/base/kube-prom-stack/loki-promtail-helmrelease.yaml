@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: loki
-  namespace: monitoring
+  namespace: homelab
 spec:
   interval: 10m
   chart:
@@ -31,7 +31,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: promtail
-  namespace: monitoring
+  namespace: homelab
 spec:
   interval: 10m
   chart:
