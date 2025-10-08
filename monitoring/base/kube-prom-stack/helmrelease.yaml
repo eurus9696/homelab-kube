@@ -40,7 +40,7 @@ spec:
           cpu: 200m
           memory: 512Mi
     grafana:
-      enabled: false
+      enabled: true
     kubeStateMetrics:
       resources:
         requests:
