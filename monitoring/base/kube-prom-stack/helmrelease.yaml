@@ -41,6 +41,9 @@ spec:
           memory: 512Mi
     grafana:
       enabled: true
+      sidecar:
+        dashboards:
+          enabled: true
     kubeStateMetrics:
       resources:
         requests:
