@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: https://github.com/eurus9696/homelab-kube.git
+  url: ssh://git@github.com/eurus9696/homelab-kube
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
