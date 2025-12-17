@@ -1,0 +1,6 @@
+
+resources:
+  - "helmrepository.yaml"
+  - "helmrelease.yaml"
+  #- "cluster-issuer-staging.yaml"
+  - "cert-kustomization.yaml"

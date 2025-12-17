@@ -1,6 +1,7 @@
 
+
+
 resources:
-  - "helmrepository.yaml"
-  - "helmrelease.yaml"
-  #- "cluster-issuer-staging.yaml"
-  - tls
+  - "./certs-controller"
+  - "./tls"
+
