@@ -8,6 +8,8 @@ spec:
   prune: true
   wait: true
   interval: 10m
+  dependsOn:
+    - name: certs-controller
   sourceRef:
     kind: GitRepository
     name: flux-system
