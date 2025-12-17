@@ -4,9 +4,13 @@ metadata:
   name: metallb-config
   namespace: flux-system
 spec:
+  interval: 10m
+  prune: true
+  wait: true
   dependsOn:
     - name: metallb-controller
   sourceRef:
     kind: GitRepository
     name: flux-system
+    namespace: flux-system
   path: "./infrastructure/base/metallb-config"
