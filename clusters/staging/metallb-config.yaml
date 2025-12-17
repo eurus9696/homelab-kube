@@ -7,8 +7,6 @@ spec:
   interval: 10m
   prune: true
   wait: true
-  dependsOn:
-    - name: metallb-controller
   sourceRef:
     kind: GitRepository
     name: flux-system

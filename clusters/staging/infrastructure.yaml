@@ -5,8 +5,6 @@ metadata:
   name: infrastructure
   namespace: flux-system
 spec:
-  dependsOn:
-    - name: metallb-config
   interval: 10m0s
   path: ./infrastructure/olympus
   prune: true
