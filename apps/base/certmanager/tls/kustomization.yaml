@@ -5,3 +5,4 @@ resources:
   - "certificate-grafana.yaml"
   - "ca-root-certificate.yaml"
   - "selfsigned-bootstrap-issuer.yaml"
+  - "tls-kustomization.yaml"
