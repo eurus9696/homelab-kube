@@ -2,4 +2,5 @@
 resources:
   #- "./cert-manager"
   - "./ingress-nginx"
-  - "./metallb"
+  - "./metallb-configs"
+  - "./metallb-controller"
