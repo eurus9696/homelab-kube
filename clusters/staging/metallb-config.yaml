@@ -13,4 +13,4 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  path: "./infrastructure/base/metallb-config"
+  path: "./infrastructure/base/metallb-configs"
