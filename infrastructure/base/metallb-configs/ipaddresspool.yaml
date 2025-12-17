@@ -13,7 +13,5 @@ metadata:
   name: homelab-l2
   namespace: homelab
 spec:
-  dependsOn:
-    - homelab-ip-pool
   ipAddressPools:
     - homelab-ip-pool
