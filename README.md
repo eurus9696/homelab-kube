@@ -41,6 +41,23 @@ This repository contains everything needed to run a homelab Kubernetes cluster w
 ├── monitoring/                      # Monitoring stack (Prometheus, Grafana)
 └── namespaces/                      # Namespace definitions
 ```
+## Technologies Used
+This project utilizes a wide range of technologies:
+
+Virtualization: Proxmox VE
+Operating System: Ubuntu Server from cloud-init template
+Configuration Management: Ansible
+Containerization: Docker, Docker Compose
+Orchestration: k3s (a lightweight Kubernetes distribution)
+GitOps: FluxCD
+Ingress & Networking: Nginx, MetalLB
+Service Mesh: Tailscale
+Monitoring & Alerting: Prometheus, Grafana
+Log Management: (Not currently implemented)
+Security: Cert-Manager (for TLS certificates)
+Secrets Backend: -
+DNS: Pihole
+Applications: Home Assistant, Nginx Proxy Manager, Portainer, Plex, Servarr stack, OwnCloud, and many more.
 
 ## Getting Started
 
