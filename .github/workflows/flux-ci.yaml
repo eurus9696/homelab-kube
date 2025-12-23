@@ -35,6 +35,7 @@ jobs:
       - name: Kubeconform Validation
         run: |
           kubeconform -strict -summary -ignore-missing-schemas \
+          -skip 'kustomization.yaml,.github,.yamllint' \
           -schema-location default \
           -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json' \
           .
