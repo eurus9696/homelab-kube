@@ -31,14 +31,16 @@ jobs:
             kustomize build "$dir" --load-restrictor LoadRestrictionsNone > /dev/null
           done
 
-      # 2. Validate Kubernetes Manifests (with Flux Schema support)
       - name: Kubeconform Validation
         run: |
-          kubeconform -strict -summary -ignore-missing-schemas \
-          -skip 'kustomization.yaml,.github,.yamllint' \
-          -schema-location default \
-          -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json' \
-          .
+          find . -type f \( -name '*.yaml' -o -name '*.yml' \) \
+            -not -name 'kustomization.yaml' \
+            -not -path '*/.github/*' \
+            -not -path '*/.yamllint*' \
+            -print0 | xargs -0 kubeconform -strict -summary -ignore-missing-schemas \
+            -schema-location default \
+            -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json'
+
 
   helm-lint:
     runs-on: ubuntu-latest
