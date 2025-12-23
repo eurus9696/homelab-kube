@@ -1,7 +1,6 @@
 name: Flux CI
 
 on:
-  dispatch:
   push:
     branches: [ "main" ]
     paths:
