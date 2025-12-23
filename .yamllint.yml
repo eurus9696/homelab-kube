@@ -15,10 +15,10 @@ rules:
     max-end: 1
 
   # Do NOT fail the build for missing newline at EOF
-  new-line-at-end-of-file: warning
+  new-line-at-end-of-file: disable
 
   # Trailing spaces are annoying but not worth failing CI
-  trailing-spaces: warning
+  trailing-spaces: disable
 
   # Flux & Helm YAMLs get long
   line-length:
