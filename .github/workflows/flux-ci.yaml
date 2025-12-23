@@ -28,7 +28,7 @@ jobs:
           # Finds all kustomization.yaml files and attempts to build them
           find . -type f -name kustomization.yaml -exec dirname {} \; | while read dir; do
             echo "Building $dir..."
-            kustomize build "$dir" > /dev/null
+            kustomize build "$dir" --load-restrictor LoadRestrictionsNone > /dev/null
           done
 
       # 2. Validate Kubernetes Manifests (with Flux Schema support)
