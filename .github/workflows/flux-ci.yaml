@@ -41,19 +41,3 @@ jobs:
             -schema-location default \
             -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json'
 
-
-  helm-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Lint Helm Charts
-        run: |
-          # Loop through all charts in your /charts folder (if you have one)
-          if [ -d "./charts" ]; then
-            for chart in ./charts/*; do
-              if [ -d "$chart" ]; then
-                helm lint "$chart"
-              fi
-            done
-          fi
