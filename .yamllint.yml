@@ -8,35 +8,28 @@ ignore: |
   **/flux-system/gotk-sync.yaml
 
 rules:
-  # Kustomize files often start with blank lines
   empty-lines:
     max: 2
     max-start: 1
     max-end: 1
     level: warning
 
-  # Do NOT fail the build for missing newline at EOF
   new-line-at-end-of-file: disable
   document-start: disable
 
-  # Trailing spaces are annoying but not worth failing CI
   trailing-spaces: disable
 
-  # Flux & Helm YAMLs get long
   line-length:
     max: 120
     level: warning
 
-  # Comments style should not fail CI
   comments:
     level: warning
 
-  # Kubernetes YAML expectations
   indentation:
     spaces: 2
     indent-sequences: consistent
 
-  # Good to keep
   key-duplicates: enable
   truthy:
     allowed-values: ['true', 'false', 'on', 'off']
