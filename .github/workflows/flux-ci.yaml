@@ -1,0 +1,60 @@
+name: Flux CI
+
+on:
+  dispatch:
+  push:
+    branches: [ "main" ]
+    paths:
+      - '**.yaml'
+      - '**.yml'
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Flux CLI
+        uses: fluxcd/flux2/action@main
+
+      - name: Setup Kubeconform
+        uses: actions/setup-go@v3
+        with:
+          go-version: '1.20'
+      - run: go install github.com/yannh/kubeconform/cmd/kubeconform@latest
+
+      # 1. Validate Flux Kustomizations
+      - name: Validate Kustomization Build
+        run: |
+          # Finds all kustomization.yaml files and attempts to build them
+          find . -type f -name kustomization.yaml -exec dirname {} \; | while read dir; do
+            echo "Building $dir..."
+            kustomize build "$dir" > /dev/null
+          done
+
+      # 2. Validate Kubernetes Manifests (with Flux Schema support)
+      - name: Kubeconform Validation
+        run: |
+          kubeconform -strict -summary -ignore-missing-schemas \
+          -schema-location default \
+          -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json' \
+          .
+
+  helm-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Lint Helm Charts
+        run: |
+          # Loop through all charts in your /charts folder (if you have one)
+          if [ -d "./charts" ]; then
+            for chart in ./charts/*; do
+              if [ -d "$chart" ]; then
+                helm lint "$chart"
+              fi
+            done
+          fi
