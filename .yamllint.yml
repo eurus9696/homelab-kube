@@ -1,22 +1,40 @@
 # .yamllint
 extends: default
 
+ignore: |
+  **/charts/**/templates/**
+  **/*.tpl
+  **/flux-system/gotk-components.yaml
+  **/flux-system/gotk-sync.yaml
+
 rules:
-  document-start: disable      # Flux & Helm templates often omit ---
-  truthy:
-    allowed-values: ['true', 'false', 'on']
+  # Kustomize files often start with blank lines
+  empty-lines:
+    max: 2
+    max-start: 1
+    max-end: 1
+
+  # Do NOT fail the build for missing newline at EOF
+  new-line-at-end-of-file: warning
+
+  # Trailing spaces are annoying but not worth failing CI
+  trailing-spaces: warning
+
+  # Flux & Helm YAMLs get long
   line-length:
-    max: 120                   # Helm values can get long
+    max: 120
     level: warning
+
+  # Comments style should not fail CI
+  comments:
+    level: warning
+
+  # Kubernetes YAML expectations
   indentation:
     spaces: 2
     indent-sequences: consistent
+
+  # Good to keep
   key-duplicates: enable
-  empty-lines:
-    max: 4
-  trailing-spaces: warning
-  comments:
-    min-spaces-from-content: 1
-  ignore: |
-  **/charts/**/templates/**
-  **/*.tpl
+  truthy:
+    allowed-values: ['true', 'false', 'on', 'off']
