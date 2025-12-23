@@ -6,6 +6,7 @@ ignore: |
   **/*.tpl
   **/flux-system/gotk-components.yaml
   **/flux-system/gotk-sync.yaml
+  **/.github/**
 
 rules:
   empty-lines:
