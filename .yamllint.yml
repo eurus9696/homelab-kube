@@ -11,5 +11,12 @@ rules:
   indentation:
     spaces: 2
     indent-sequences: consistent
+  key-duplicates: enable
+  empty-lines:
+    max: 4
+  trailing-spaces: warning
   comments:
     min-spaces-from-content: 1
+  ignore: |
+  **/charts/**/templates/**
+  **/*.tpl
