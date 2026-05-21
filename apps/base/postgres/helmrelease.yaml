@@ -16,8 +16,8 @@ spec:
   values:
     image:
       repository: pgvector/pgvector
-      tag: "16"
-      digest: "sha256:REPLACE_ME"
+      tag: "pg16"
+      digest: "sha256:00ba258a66dac104fd5171074a0084462a64a1369d8513f3d0a634e2f24d15bc"
     auth:
       existingSecret: postgres-secret
     primary:

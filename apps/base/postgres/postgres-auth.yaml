@@ -5,7 +5,5 @@ metadata:
   namespace: databases
 type: Opaque
 data:
-  # TODO: Replace with base64-encoded passwords
-  # Run: echo -n 'your-password' | base64
-  postgres-password: "REPLACE_ME_BASE64"
-  replication-password: "REPLACE_ME_BASE64"
+  postgres-password: "bHVmZnlnb2JycnJycg=="
+  replication-password: "bHVmZnlnb2JycnJycg=="
