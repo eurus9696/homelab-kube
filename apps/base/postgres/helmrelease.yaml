@@ -23,6 +23,8 @@ spec:
     auth:
       existingSecret: postgres-secret
     primary:
+      containerSecurityContext:
+        readOnlyRootFilesystem: false
       persistence:
         enabled: true
         size: 10Gi
