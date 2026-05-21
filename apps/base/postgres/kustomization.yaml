@@ -2,4 +2,3 @@ resources:
   - "namespace.yaml"
   - "postgres-auth.yaml"
   - "helmrelease.yaml"
-  - "tailscale-connector.yaml"
