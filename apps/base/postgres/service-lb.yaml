@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgres-tailscale
+  name: postgres-lb
   namespace: databases
-  annotations:
-    tailscale.com/tailnet-fqdn: "postgres."
 spec:
-  type: ClusterIP
+  type: LoadBalancer
+  loadBalancerIP: 192.168.1.244
   selector:
     app.kubernetes.io/name: postgresql
     app.kubernetes.io/instance: postgres

@@ -3,4 +3,4 @@ resources:
   - "helmrepository.yaml"
   - "postgres-auth.yaml"
   - "helmrelease.yaml"
-  - "tailscale-connector.yaml"
+  - "service-lb.yaml"
