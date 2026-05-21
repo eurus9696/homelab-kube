@@ -1,0 +1,80 @@
+# Secrets and credentials
+*.env
+.env
+.env.*
+*.env.*
+kubeconfig
+kubeconfig-*
+*.kubeconfig
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+secrets.yaml
+*-secret.yaml
+*-secrets.yaml
+*secret*.yaml
+*secrets*.yaml
+
+# Certificates (auto-generated)
+certs/
+certificates/
+
+# SOPS encrypted files (if used later)
+*.sops.yaml
+.sops.yaml
+
+# Ansible vault
+.vault-password
+vault-password*
+*.vault
+
+# AI assistant files
+.ai/
+*.ai.md
+agent-notes/
+opencode-sessions/
+CLAUDE.md
+AGENTS.md
+.claude/
+.cursorrules
+.cursor/
+.github/copilot-instructions.md
+.copilot/
+.windsurfrules
+.roo/
+.constitution/
+aider*
+
+# Helm artifacts
+charts/
+*.tar.gz
+*.tgz
+
+# OS and editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary and backups
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+*.rej
+*.patch
+
+# Logs
+*.log
+
+# Python (if scripts added)
+__pycache__/
+*.pyc
+.venv/
+venv/

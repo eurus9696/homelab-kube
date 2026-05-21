@@ -1,5 +1,5 @@
-
 resources:
   - "homelab.yaml"
   - "cert-manager.yaml"
   - "monitoring.yaml"
+  - "databases.yaml"
