@@ -1,4 +1,3 @@
 resources:
   - "postgres-auth.yaml"
   - "helmrelease.yaml"
-  - "tailscale-connector.yaml"

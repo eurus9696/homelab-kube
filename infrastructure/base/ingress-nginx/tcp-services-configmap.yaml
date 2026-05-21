@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tcp-services
+  namespace: homelab
+data:
+  "5432": "databases/postgres-primary:5432"
