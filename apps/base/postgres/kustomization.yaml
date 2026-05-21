@@ -1,4 +1,6 @@
 resources:
   - "namespace.yaml"
+  - "helmrepository.yaml"
   - "postgres-auth.yaml"
   - "helmrelease.yaml"
+  - "service-lb.yaml"
