@@ -15,6 +15,9 @@ spec:
   releaseName: metallb
   interval: 24h
   values:
+    prometheus:
+      serviceMonitor:
+        enabled: false
     controller:
       resources:
         requests:
