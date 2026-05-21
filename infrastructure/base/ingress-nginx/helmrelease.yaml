@@ -16,8 +16,6 @@ spec:
   interval: 10m
   values:
     controller:
-      tcp:
-        "5432": "databases/postgres-primary:5432"
       resources:
         requests:
           cpu: 200m
