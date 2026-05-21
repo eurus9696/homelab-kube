@@ -12,7 +12,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
-        namespace: homelab
   values:
     image:
       repository: pgvector/pgvector
