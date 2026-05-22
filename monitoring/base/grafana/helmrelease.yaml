@@ -1,0 +1,65 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: grafana
+  namespace: homelab
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: grafana
+      sourceRef:
+        kind: HelmRepository
+        name: grafana
+        namespace: homelab
+      interval: 10m
+  values:
+    adminUser: admin
+    adminPassword: changeme
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+      limits:
+        cpu: 200m
+        memory: 512Mi
+    persistence:
+      enabled: true
+      size: 5Gi
+    service:
+      type: ClusterIP
+    datasources:
+      datasources.yaml:
+        apiVersion: 1
+        datasources:
+          - name: VictoriaMetrics
+            type: prometheus
+            url: http://victoria-metrics-single-server:8428
+            isDefault: true
+            access: proxy
+    dashboardProviders:
+      dashboardproviders.yaml:
+        apiVersion: 1
+        providers:
+          - name: default
+            orgId: 1
+            folder: ""
+            type: file
+            disableDeletion: false
+            editable: true
+            options:
+              path: /var/lib/grafana/dashboards/default
+    dashboards:
+      default:
+        node-exporter:
+          gnetId: 1860
+          revision: 1
+          datasource: VictoriaMetrics
+        kubernetes-cluster:
+          gnetId: 315
+          revision: 1
+          datasource: VictoriaMetrics
+        postgresql-overview:
+          gnetId: 9628
+          revision: 1
+          datasource: VictoriaMetrics
