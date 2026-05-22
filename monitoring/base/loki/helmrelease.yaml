@@ -70,6 +70,8 @@ spec:
         enabled: false
         grafanaAgent:
           installOperator: false
+    test:
+      enabled: false
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
