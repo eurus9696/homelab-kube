@@ -40,6 +40,10 @@ spec:
             url: http://victoria-metrics-single-server:8428
             isDefault: true
             access: proxy
+          - name: Loki
+            type: loki
+            url: http://loki.homelab.svc.cluster.local:3100
+            access: proxy
     dashboardProviders:
       dashboardproviders.yaml:
         apiVersion: 1
