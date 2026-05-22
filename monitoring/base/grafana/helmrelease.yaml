@@ -7,11 +7,8 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: grafana
-      sourceRef:
-        kind: HelmRepository
-        name: grafana
-        namespace: homelab
+      chart: oci://ghcr.io/grafana-community/helm-charts/grafana
+      version: "12.3.3"
       interval: 10m
   values:
     adminUser: admin
