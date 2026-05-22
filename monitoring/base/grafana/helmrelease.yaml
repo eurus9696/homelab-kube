@@ -62,16 +62,19 @@ spec:
       default:
         node-exporter:
           gnetId: 1860
-          revision: 1
+          revision: 36
           datasource:
-            name: VictoriaMetrics
+            - name: DS_LOCALHOST
+              value: VictoriaMetrics
         kubernetes-cluster:
           gnetId: 315
-          revision: 1
+          revision: 3
           datasource:
-            name: VictoriaMetrics
+            - name: DS_PROMETHEUS
+              value: VictoriaMetrics
         postgresql-overview:
           gnetId: 9628
-          revision: 1
+          revision: 8
           datasource:
-            name: VictoriaMetrics
+            - name: DS_PROMETHEUS
+              value: VictoriaMetrics
