@@ -14,6 +14,8 @@ spec:
         name: grafana-loki
         namespace: homelab
   values:
+    podSecurityPolicy:
+      enabled: false
     persistence:
       enabled: true
       size: 5Gi
