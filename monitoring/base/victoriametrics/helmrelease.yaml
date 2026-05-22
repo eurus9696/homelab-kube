@@ -14,6 +14,11 @@ spec:
         namespace: homelab
       interval: 10m
   values:
+    serviceAccount:
+      create: true
+      name: victoria-metrics
+    rbac:
+      create: true
     server:
       replicaCount: 1
       retentionPeriod: "30"
