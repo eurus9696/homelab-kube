@@ -4,5 +4,6 @@ metadata:
   name: grafana
   namespace: homelab
 spec:
-  url: https://grafana.github.io/helm-charts
+  type: oci
+  url: oci://ghcr.io/grafana-community/helm-charts
   interval: 24h
