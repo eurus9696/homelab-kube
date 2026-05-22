@@ -37,11 +37,13 @@ spec:
         datasources:
           - name: VictoriaMetrics
             type: prometheus
+            orgId: 1
             url: http://victoria-metrics-victoria-metrics-single-server:8428
             isDefault: true
             access: proxy
           - name: Loki
             type: loki
+            orgId: 1
             url: http://loki.homelab.svc.cluster.local:3100
             access: proxy
     dashboardProviders:
@@ -61,12 +63,15 @@ spec:
         node-exporter:
           gnetId: 1860
           revision: 1
-          datasource: VictoriaMetrics
+          datasource:
+            name: VictoriaMetrics
         kubernetes-cluster:
           gnetId: 315
           revision: 1
-          datasource: VictoriaMetrics
+          datasource:
+            name: VictoriaMetrics
         postgresql-overview:
           gnetId: 9628
           revision: 1
-          datasource: VictoriaMetrics
+          datasource:
+            name: VictoriaMetrics
