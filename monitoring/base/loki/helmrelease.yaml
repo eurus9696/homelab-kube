@@ -30,11 +30,19 @@ spec:
     resultsCache:
       resources:
         requests:
-          cpu: 500m
+          cpu: 200m
           memory: 1229Mi
         limits:
-          cpu: 200m
+          cpu: 500m
           memory: 1229Mi    
+    chunksCache:
+      resources:
+        requests:
+          cpu: 200m
+          memory: 512Mi
+        limits:
+          cpu: 200m
+          memory: 512Mi
     loki:
       commonConfig:
         replication_factor: 1
