@@ -28,21 +28,9 @@ spec:
         enabled: true
         size: 5Gi
     resultsCache:
-      resources:
-        requests:
-          cpu: 200m
-          memory: 1229Mi
-        limits:
-          cpu: 500m
-          memory: 1229Mi    
+      enabled: false
     chunksCache:
-      resources:
-        requests:
-          cpu: 200m
-          memory: 512Mi
-        limits:
-          cpu: 200m
-          memory: 512Mi
+      enabled: false
     loki:
       commonConfig:
         replication_factor: 1
