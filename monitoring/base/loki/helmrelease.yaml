@@ -27,6 +27,14 @@ spec:
       persistence:
         enabled: true
         size: 5Gi
+    resultsCache:
+      resources:
+        requests:
+          cpu: 500m
+          memory: 1229Mi
+        limits:
+          cpu: 200m
+          memory: 1229Mi    
     loki:
       commonConfig:
         replication_factor: 1
